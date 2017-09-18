@@ -1,6 +1,7 @@
 ﻿namespace RectangleGenerator.Models {
     public static class ArgumentTypes {
-        public static readonly string Count = "--count";
-        public static readonly string Help = "--help";
+        public const string Count = "--count";
+        public const string Help = "--help";
+        public const string File = "--file";
     }
 }

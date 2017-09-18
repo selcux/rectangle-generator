@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using RectangleGenerator.Models;
 
 namespace RectangleGenerator.Extensions {
     public static class RectangleExtensions {
@@ -19,6 +20,10 @@ namespace RectangleGenerator.Extensions {
             }
 
             return sb.ToString();
+        }
+
+        public static Rect ToRect(this Rectangle rectangle) {
+            return new Rect(rectangle.X, rectangle.Y, rectangle.Width, rectangle.Height);
         }
     }
 }

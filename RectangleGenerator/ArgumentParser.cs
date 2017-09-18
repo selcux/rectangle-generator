@@ -41,5 +41,17 @@ namespace RectangleGenerator {
             helpMessage = sb.ToString();
             return true;
         }
+
+        public bool GetFilePath(out string filePath) {
+            filePath = null;
+            if (!_args.Contains(ArgumentTypes.File)) {
+                return false;
+            }
+
+            var index = Array.IndexOf(_args, ArgumentTypes.File);
+            filePath = _args[index + 1];
+
+            return true;
+        }
     }
 }
